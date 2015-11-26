@@ -60,7 +60,7 @@ import java.util.Iterator;
  * explanation.
  */
 public abstract class VectorBinaryAssign {
-  public static final VectorBinaryAssign[] OPERATIONS = {
+  private static final VectorBinaryAssign[] OPERATIONS = {
     new AssignNonzerosIterateThisLookupThat(),
     new AssignNonzerosIterateThatLookupThisMergeUpdates(),
     new AssignNonzerosIterateThatLookupThisInplaceUpdates(),
