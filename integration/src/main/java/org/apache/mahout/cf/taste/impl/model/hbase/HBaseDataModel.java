@@ -485,13 +485,13 @@ public final class HBaseDataModel implements DataModel, Closeable {
     table.close();
 
     // Copy into FastIDSet
-    FastIDSet userIDs = new FastIDSet(ids.size());
+    FastIDSet userIDs_temp = new FastIDSet(ids.size());                  // rename userIDs -> userIDs_temp
     for (long l : ids) {
-      userIDs.add(l);
+      userIDs_temp.add(l);
     }
 
     // Swap with the active
-    this.userIDs = userIDs;
+    this.userIDs = userIDs_temp;
   }
 
 }
