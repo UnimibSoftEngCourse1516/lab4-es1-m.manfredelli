@@ -140,7 +140,11 @@ public abstract class AbstractJDBCDataModel extends AbstractJDBCComponent implem
          getMaxPreferenceSQL,
          getMinPreferenceSQL);
   }
-
+  
+  //Ritengo che non debba essere corretta perchè questo costruttore necessita di 20
+  //parametri per instanziare la classe (non posso togliere nessun parametro perchè
+  //nessuno di essi è superfluo e non posso spezzare il costruttore in diversi metodi
+  //che prendono meno parametri alla volta).
   protected AbstractJDBCDataModel(DataSource dataSource,
                                   String preferenceTable,
                                   String userIDColumn,
